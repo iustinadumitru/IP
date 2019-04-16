@@ -56,7 +56,7 @@
                 <div class="top-bar">
                     <form action="{% url 'search' %}" class="left">
                         <a href="#" class="toggle-menu topm2"><i class="material-icons">menu</i></a>
-                        <img src="{% static 'icons/icon_search.svg' %}" alt="" class="icon">
+                        <img src="{% static 'icons/icon_search.svg' %}" alt="" class="icon" onclick="getFocus()">
                         <input type="text" id="input_search" name="room" placeholder="Search">
                     </form>
                     <div class="right">
@@ -147,5 +147,10 @@
                 </div>
             </div>
         </div>
+        <script>
+function getFocus() {
+  document.getElementById("input_search").focus();
+}
+        </script>
     </body>
 </html>

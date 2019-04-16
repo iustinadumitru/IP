@@ -32,12 +32,8 @@ def search(request):
             queryset_rooms = CinemaRoom.objects.all().filter(is_published=True)
             queryset_rooms = queryset_rooms.filter(name__icontains=room)  # column__iexact / column__exact
 
-    paginator = Paginator(queryset_rooms, 1)
-    page = request.GET.get('page')
-    paged_rooms = paginator.get_page(page)
-
     context = {
-        'rooms': paged_rooms,
+        'rooms': queryset_rooms,
         'values': request.GET
     }
     return render(request, 'cinema_rooms/search.html', context)

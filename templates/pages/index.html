@@ -53,7 +53,7 @@
                 <div class="top-bar">
                     <form action="" class="left">
                         <a href="#" class="toggle-menu topm2"><i class="material-icons">menu</i></a>
-                        <img src="{% static 'icons/icon_search.svg' %}" alt="" class="icon">
+                        <img src="{% static 'icons/icon_search.svg' %}" alt="" class="icon" onclick="getFocus()">
                         <input type="text" id="input_search" placeholder="Search">
                     </form>
                     <div class="right">
@@ -161,5 +161,10 @@
                 crossorigin="anonymous"></script>
         <script src="{% static 'scripts/script.js' %}"></script>
         <script src="{% static 'scripts/home.js' %}"></script>
+        <script>
+function getFocus() {
+  document.getElementById("input_search").focus();
+}
+        </script>
     </body>
 </html>
