@@ -25,6 +25,7 @@ body {
     background: var(--color-prim);
     color: #333;
     position: relative;
+    flex-shrink: 0;
 }
 .layout .l-right {
     flex: 1;
